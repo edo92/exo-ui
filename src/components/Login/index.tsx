@@ -1,7 +1,5 @@
-import React, { Component } from "react";
-import { Form, Input, Button } from "antd";
-
-import "./login.sass";
+import React, { Component } from 'react';
+import { Form, Input, Button } from 'antd';
 
 class Login extends Component<IProps> {
   onFinish = (form: IForm): void => {
@@ -9,7 +7,7 @@ class Login extends Component<IProps> {
   };
 
   onFinishFailed = (err: any): void => {
-    console.log("falied", err);
+    console.log('falied', err);
   };
 
   render() {
@@ -24,7 +22,7 @@ class Login extends Component<IProps> {
           >
             <Form.Item
               name="email"
-              rules={[{ required: true, message: "Please input your email!" }]}
+              rules={[{ required: true, message: 'Please input your email!' }]}
             >
               <Input placeholder="Email" />
             </Form.Item>
@@ -32,7 +30,7 @@ class Login extends Component<IProps> {
             <Form.Item
               name="password"
               rules={[
-                { required: true, message: "Please input your password!" },
+                { required: true, message: 'Please input your password!' },
               ]}
             >
               <Input.Password name="password" placeholder="Password" />
@@ -56,7 +54,7 @@ class Login extends Component<IProps> {
 export default Login;
 
 interface IProps {
-  onSubmit: any;
+  onSubmit?: any;
 }
 
 interface IForm {
